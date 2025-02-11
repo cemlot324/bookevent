@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        baskerville: ['var(--font-baskerville)'],
+        baskerville: ['var(--font-baskerville)', 'serif'],
       },
     },
   },
