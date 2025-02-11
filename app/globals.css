@@ -19,3 +19,107 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.ribbon-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.ribbon {
+  position: relative;
+  background: #4558a3;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.ribbon::before,
+.ribbon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border: 25px solid #3a4b8c;
+}
+
+.ribbon::before {
+  left: -50px;
+  border-left-color: transparent;
+}
+
+.ribbon::after {
+  right: -50px;
+  border-right-color: transparent;
+}
+
+.ribbon .ribbon-content::before,
+.ribbon .ribbon-content::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  border: 15px solid #2d3b6e;
+}
+
+.ribbon .ribbon-content::before {
+  left: 0;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.ribbon .ribbon-content::after {
+  right: 0;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-100%, 50%) scale(0.2) rotate(10deg);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(20%, 20%) scale(1) rotate(-10deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(40%, 60%) scale(1) rotate(10deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(60%, 30%) scale(1) rotate(-10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(80%, 50%) scale(1) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(120%, 20%) scale(0.2) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float 15s infinite ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
