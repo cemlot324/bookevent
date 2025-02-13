@@ -60,7 +60,7 @@ const EventInfo = () => {
 
               <div className="pt-4 text-center">
                 <a 
-                  href="https://www.amazon.co.uk/Be-Here-Now-Mindfulness-little/dp/B0DPVQJ49J"
+                  href="https://www.eventbrite.com/e/book-launch-be-here-now-mindfulness-for-little-minds-tickets-1236354261879?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-[#4558a3] text-white px-8 py-3 rounded-lg hover:bg-[#3a4b8c] transition-colors font-semibold"

@@ -16,7 +16,7 @@ const SpecialGuest = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square w-full max-w-md mx-auto">
             <Image
-              src="/Userdefault.jpg"
+              src="/Hella.jpg"
               alt="Special Guest"
               fill
               className="object-cover"
@@ -29,24 +29,17 @@ const SpecialGuest = () => {
             </h3>
             <div className="space-y-4 text-black/80">
               <p>
-                We're excited to welcome our special guest, a passionate researcher in child psychology 
-                and mindfulness, who will be sharing valuable insights and answering your questions 
-                about mindfulness practices for children.
+              Hi, I am Helle, and I am a psychology student in Norway. I have been so lucky to be asked to attend this event based on my background in psychology, and an interest in mindfulness.
               </p>
               <p>
-                With a focus on how mindfulness can positively impact child development, our guest 
-                will discuss practical techniques that can be implemented at home and in educational 
-                settings.
+              I am a person who loves to get new experiences, I love learning, and being challenged. This is maybe also why psychology is the third degree that I started, and the second that I will finish. It is maybe also why I decided to travel a lot, study abroad and never seem to get tired of this.
               </p>
               <p>
-                During the Q&A session, you'll have the opportunity to:
+              Although changing direction, and going to new and foreign places can sometimes be uncomfortable and stressful, I am a firm believer of how newness and challenge is a necessity for also feeling sense of mastery, appreciation, and a good path to get to know yourself and get closer to «the otherness» around you.
               </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Ask questions about mindfulness techniques for different age groups</li>
-                <li>Learn how to introduce mindfulness to children who might be resistant</li>
-                <li>Understand the science behind mindfulness and child development</li>
-                <li>Get practical tips for establishing daily mindfulness routines</li>
-              </ul>
+              <p>
+              Another big part of my life is sports and nature. I love feeling how the body allows us to do activities and how muscles and reactions also have a memory, and the feeling of ableness. I also love the smell of the forest after it has been raining, the feeling of the wind on my face, the biting cold that prickles. The view once you reach the summit, and the force of the waves.
+              </p>
             </div>
           </div>
         </div>

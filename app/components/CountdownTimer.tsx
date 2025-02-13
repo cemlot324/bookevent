@@ -83,7 +83,7 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
           </div>
 
           <a 
-            href="https://your-booking-website.com"
+            href="https://www.eventbrite.com/e/book-launch-be-here-now-mindfulness-for-little-minds-tickets-1236354261879?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-block bg-white text-[#4558a3] hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-colors text-lg shadow-lg transform hover:scale-105 transition-all"
