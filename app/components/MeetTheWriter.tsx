@@ -14,7 +14,7 @@ const MeetTheWriter = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square w-full max-w-md mx-auto">
             <ImageWithError
-              src="/authorimage.jpg"
+              src="/Author.jpg"
               alt="S.J Abdi"
               fill
               priority
