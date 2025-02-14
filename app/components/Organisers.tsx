@@ -19,15 +19,15 @@ Life is an adventure, and I'm always looking forward to the next discovery!`
   },
   {
     name: "Aiden",
-    image: "/Aiden.jpg",
+    image: "/aiden.jpg",
     description: `Hi! My name is Aiden and I have a long-standing career in supporting individuals through challenging times. This has seen me engaging with adults in the community and enabling children to access their education, both in the UK and around the world! I was initially drawn to this line of work after experiencing and overcoming my own mental health and substance misuse issues, feeling a need to make a change in the world and give back what was given to me. After over a decade of this work I felt it time for a change, which has led me to develop a career in Events Management. I am staying true to my passions and am on a mission to deliver engaging experiences that are accessible and fulfilling to all audiences. Outside of work I can often be found enjoying live music or stomping around the Welsh countryside with my fiancée and our rescue dog, Twyla.`
   },
   {
     name: "Hannah",
-    image: "/Userdefault.jpg",
-    description: `Hi there, I’m Hannah I grew up in a small village in Germany, but my curiosity led me across the world, from helping laid-back kite events in remote villages on Zanzibar to high-end yacht cruises in Egypt. After working in corporate event management, I returned to my passion while studying for a master’s in Event Management.
-Mindfulness, especially for kids, is something I feel deeply about. I’ve always been active and struggled to sit still. It wasn’t until later in life that I was diagnosed with ADHD, and I realized how much I had missed having the right tools to manage my energy and focus. Mindfulness has been a game-changer for me, and I wish I had learned these techniques earlier. That’s why I’m passionate about giving parents and kids access to them—helping them navigate life with more ease, awareness, and joy.
-As a sports enthusiast, I’m especially curious about mindfulness techniques that incorporate movement, helping kids (and adults!) find focus in an active way. I’m excited to share this journey with you!`
+    image: "/hanna.jpg",
+    description: `Hi there, I'm Hannah I grew up in a small village in Germany, but my curiosity led me across the world, from helping laid-back kite events in remote villages on Zanzibar to high-end yacht cruises in Egypt. After working in corporate event management, I returned to my passion while studying for a master's in Event Management.
+Mindfulness, especially for kids, is something I feel deeply about. I've always been active and struggled to sit still. It wasn't until later in life that I was diagnosed with ADHD, and I realized how much I had missed having the right tools to manage my energy and focus. Mindfulness has been a game-changer for me, and I wish I had learned these techniques earlier. That's why I'm passionate about giving parents and kids access to them—helping them navigate life with more ease, awareness, and joy.
+As a sports enthusiast, I'm especially curious about mindfulness techniques that incorporate movement, helping kids (and adults!) find focus in an active way. I'm excited to share this journey with you!`
   },
   {
     name: "Damian",

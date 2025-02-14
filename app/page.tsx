@@ -18,15 +18,15 @@ export default function Home() {
     <main className="font-baskerville">
       <LastSpotsBanner />
       <Hero />
-      <EventInfo />
       <CountdownTimer targetDate={eventDate} />
+      <EventInfo />
       <MeetTheWriter />
-      <Newsletter />
-      <SpecialGuest />
       <BookPromotion />
-      <Organisers />
-      <BlogPreview />
+      <SpecialGuest />
       <Questions />
+      <Organisers />
+      <Newsletter />
+      <BlogPreview />
       <Footer />
     </main>
   )

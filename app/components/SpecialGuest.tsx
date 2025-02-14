@@ -16,7 +16,7 @@ const SpecialGuest = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square w-full max-w-md mx-auto">
             <Image
-              src="/Hella.jpg"
+              src="/hella.jpg"
               alt="Special Guest"
               fill
               className="object-cover"

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import clientPromise from '@/app/lib/mongodb'
-import { Document } from 'mongodb'
+import { Document, MongoClient } from 'mongodb'
 
 interface VisitCount extends Document {
   _id: string;
@@ -8,13 +8,46 @@ interface VisitCount extends Document {
 }
 
 export async function GET() {
+  let client: MongoClient | null = null;
+  
   try {
-    const client = await clientPromise
-    const db = client.db("beherenow")
-    const collection = db.collection<VisitCount>("visits")
+    // Connect to MongoDB with timeout
+    client = await Promise.race([
+      clientPromise,
+      new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Connection timeout')), 5000)
+      )
+    ]) as MongoClient;
 
-    // Find the current count document or create it if it doesn't exist
-    const result = await collection.findOneAndUpdate(
+    console.log('MongoDB connected successfully')
+
+    const db = client.db("beherenow")
+    const visits = db.collection<VisitCount>("visits")
+
+    // Test the connection
+    await db.command({ ping: 1 })
+    console.log('Database ping successful')
+
+    // Ensure collection exists
+    const collections = await db.listCollections({ name: 'visits' }).toArray()
+    if (collections.length === 0) {
+      console.log('Creating visits collection')
+      await db.createCollection('visits')
+    }
+
+    // Try to find the current count
+    let currentCount = await visits.findOne({ _id: 'visitCount' })
+    
+    if (!currentCount) {
+      console.log('Initializing visit counter')
+      await visits.insertOne({
+        _id: 'visitCount',
+        count: 0
+      })
+    }
+
+    // Increment the counter
+    const result = await visits.findOneAndUpdate(
       { _id: 'visitCount' },
       { $inc: { count: 1 } },
       { 
@@ -23,18 +56,29 @@ export async function GET() {
       }
     )
 
-    const count = result?.count || 0
+    if (!result) {
+      throw new Error('No document returned after update')
+    }
+
+    console.log('Visit count updated successfully:', result.count)
 
     return NextResponse.json({ 
       success: true,
-      count: count
+      count: result.count,
+      message: 'Visit count updated successfully'
     })
 
   } catch (error) {
-    console.error('Database Error:', error)
+    console.error('Visit Counter Error:', error)
     return NextResponse.json({ 
-      error: 'Failed to get visit count',
-      success: false 
-    }, { status: 500 })
+      success: false,
+      error: error instanceof Error ? error.message : 'Failed to update visit count',
+      details: process.env.NODE_ENV === 'development' ? String(error) : undefined
+    }, { 
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
   }
 } 

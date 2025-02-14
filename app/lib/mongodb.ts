@@ -1,13 +1,18 @@
-import { MongoClient } from 'mongodb'
+import { MongoClient, MongoClientOptions } from 'mongodb'
 
 if (!process.env.MONGODB_URI) {
-  throw new Error('Invalid/Missing environment variable: "MONGODB_URI"')
+  throw new Error('Please add your Mongo URI to .env.local')
 }
 
 const uri = process.env.MONGODB_URI
-const options = {}
 
-let client
+// Fix options type
+const options: MongoClientOptions = {
+  retryWrites: true,
+  w: 'majority' as const
+}
+
+let client: MongoClient
 let clientPromise: Promise<MongoClient>
 
 if (process.env.NODE_ENV === 'development') {
@@ -23,9 +28,13 @@ if (process.env.NODE_ENV === 'development') {
   }
   clientPromise = globalWithMongo._mongoClientPromise
 } else {
-  // In production mode, it's best to not use a global variable.
   client = new MongoClient(uri, options)
   clientPromise = client.connect()
 }
+
+// Add error handling
+clientPromise.catch(error => {
+  console.error('MongoDB Connection Error:', error)
+})
 
 export default clientPromise 

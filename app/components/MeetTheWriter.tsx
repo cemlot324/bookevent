@@ -11,7 +11,7 @@ const MeetTheWriter = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square w-full max-w-md mx-auto">
             <Image
-              src="/authorimage.JPG"
+              src="/authorimage.jpg"
               alt="S.J Abdi"
               fill
               className="object-cover rounded-lg shadow-lg"
@@ -44,7 +44,7 @@ const MeetTheWriter = () => {
               </p>
 
               <p>
-              Determined to make mindfulness accessible to all, Sainab wrote a children’s book to help young minds, especially those who have faced hardship, learn these life-changing skills early. She knows firsthand how powerful mindfulness can be in transforming fear into inner strength.
+              Determined to make mindfulness accessible to all, Sainab wrote a children's book to help young minds, especially those who have faced hardship, learn these life-changing skills early. She knows firsthand how powerful mindfulness can be in transforming fear into inner strength.
               </p>
 
               <p>
