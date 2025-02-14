@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import ImageWithError from './ImageWithError'
 
 const MeetTheWriter = () => {
   return (
@@ -10,10 +13,12 @@ const MeetTheWriter = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square w-full max-w-md mx-auto">
-            <Image
+            <ImageWithError
               src="/authorimage.jpg"
               alt="S.J Abdi"
               fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover rounded-lg shadow-lg"
             />
           </div>

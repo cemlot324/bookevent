@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 
 const SpecialGuest = () => {
@@ -19,6 +21,7 @@ const SpecialGuest = () => {
               src="/hella.jpg"
               alt="Special Guest"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
