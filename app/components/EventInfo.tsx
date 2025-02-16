@@ -54,7 +54,6 @@ const EventInfo = () => {
 
               <div className="space-y-2">
                 <h3 className="font-semibold text-lg text-[#4558a3]">Where</h3>
-                <p>Online via Zoom</p>
                 <p>Tickets are free, but please book in advance to secure your spot.</p>
               </div>
 

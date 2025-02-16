@@ -11,6 +11,9 @@ import Questions from './components/Questions'
 import Footer from './components/Footer'
 import BlogPreview from './components/BlogPreview'
 import SocialBanner from './components/SocialBanner'
+import NavigationBar from './components/NavigationBar'
+import MarqueeBanner from './components/MarqueeBanner'
+import CompetitionBanner from './components/CompetitionBanner'
 
 export default function Home() {
   const eventDate = new Date('2025-03-09T15:00:00.000Z')
@@ -18,17 +21,34 @@ export default function Home() {
   return (
     <main className="font-baskerville">
       <SocialBanner />
+      <NavigationBar />
       <LastSpotsBanner />
       <Hero />
       <CountdownTimer targetDate={eventDate} />
-      <EventInfo />
-      <MeetTheWriter />
-      <BookPromotion />
-      <SpecialGuest />
-      <Questions />
-      <Organisers />
+      <MarqueeBanner />
+      <div id="event-info">
+        <EventInfo />
+      </div>
+      <CompetitionBanner />
+      <div id="meet-writer">
+        <MeetTheWriter />
+      </div>
+      <div id="book">
+        <BookPromotion />
+      </div>
+      <div id="special-guest">
+        <SpecialGuest />
+      </div>
+      <div id="questions">
+        <Questions />
+      </div>
+      <div id="organisers">
+        <Organisers />
+      </div>
+      <div id="blog">
+        <BlogPreview />
+      </div>
       <Newsletter />
-      <BlogPreview />
       <Footer />
     </main>
   )

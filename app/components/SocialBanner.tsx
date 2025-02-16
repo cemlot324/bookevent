@@ -2,7 +2,7 @@ import { FaInstagram, FaFacebook } from 'react-icons/fa'
 
 const SocialBanner = () => {
   return (
-    <div className="bg-[#4558a3] text-white py-2">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-[#4558a3] text-white py-1">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-center items-center gap-6">
           <span className="hidden sm:block font-medium">Follow us on social media:</span>
