@@ -8,7 +8,7 @@ const SocialBanner = () => {
           <span className="hidden sm:block font-medium">Follow us on social media:</span>
           <div className="flex gap-4">
             <a
-              href="https://www.instagram.com/beherenowmindfulness"
+              href="https://www.instagram.com/beherenow.littlemind/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-gray-200 transition-colors"

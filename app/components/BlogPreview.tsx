@@ -13,12 +13,12 @@ const blogPosts = [
     date: 'February 11, 2025'
   },
   {
-    id: 'benefits-of-meditation',
-    title: 'The Benefits of Early Meditation Practice',
-    excerpt: 'Explore how introducing meditation to young minds can create lasting positive impacts on their development, learning abilities, and emotional intelligence.',
-    image: '/mindfulness2.jpg',
-    readTime: '4 min read',
-    date: 'February 18, 2024'
+    id: 'magic-glitter-jar',
+    title: 'Magic Glitter Jar - A Mindfulness Craft for Kids',
+    excerpt: 'Create a glitter jar to help kids manage big emotions! Shake it up and watch the glitter settle just like our thoughts when we take deep breaths. A magical way to introduce mindfulness!',
+    image: '/glitterjar.png',
+    readTime: '5 min read',
+    date: 'February 17, 2024'
   },
   {
     id: 'calming-techniques',
@@ -27,6 +27,14 @@ const blogPosts = [
     image: '/mindfulness3.jpg',
     readTime: '6 min read',
     date: 'February 15, 2024'
+  },
+  {
+    id: 'anxiety-in-children',
+    title: 'Understanding and Supporting Children with Anxiety',
+    excerpt: 'Learn how to recognize signs of anxiety in children and discover gentle mindfulness practices that can help them manage their worries and build emotional resilience.',
+    image: '/mindfulness4.jpg',
+    readTime: '7 min read',
+    date: 'February 20, 2024'
   }
 ]
 
@@ -44,41 +52,44 @@ const BlogPreview = () => {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <Link 
-              href="/blog/mindfulness" 
-              className="group block"
-            >
-              <article className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div className="relative h-64">
-                  <Image
-                    src={blogPosts[0].image}
-                    alt={blogPosts[0].title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="flex items-center text-sm text-gray-500 mb-3">
-                    <span>{blogPosts[0].date}</span>
-                    <span className="mx-2">•</span>
-                    <span>{blogPosts[0].readTime}</span>
+          <div className="grid md:grid-cols-2 gap-8">
+            {blogPosts.slice(0, 2).map((post) => (
+              <Link 
+                key={post.id}
+                href={`/blog/${post.id}`}
+                className="group block"
+              >
+                <article className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
+                  <div className="relative h-48">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <h3 className="text-2xl font-semibold text-[#4558a3] mb-3 group-hover:text-[#3a4b8c]">
-                    {blogPosts[0].title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {blogPosts[0].excerpt}
-                  </p>
-                  <div className="text-[#4558a3] font-medium group-hover:text-[#3a4b8c] flex items-center">
-                    Read full article 
-                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                  <div className="p-6">
+                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                      <span>{post.date}</span>
+                      <span className="mx-2">•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#4558a3] mb-3 group-hover:text-[#3a4b8c]">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="text-[#4558a3] font-medium group-hover:text-[#3a4b8c] flex items-center">
+                      Read full article 
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </Link>
+                </article>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
