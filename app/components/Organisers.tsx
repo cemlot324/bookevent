@@ -31,7 +31,7 @@ As a sports enthusiast, I'm especially curious about mindfulness techniques that
   },
   {
     name: "Damian",
-    image: "/Damia1.jpg",
+    image: "/D1.jpg",
     description: `With over seven years of experience in the cinema industry, I have built a career that blends my passion for film, events, and creativity. For five years, I worked as a cinema manager, honing my skills in operations, team leadership, and customer engagement. Transitioning into cinema events management two years ago allowed me to further explore my love for curating unique experiences that bring people together through film.
 
 Beyond my professional background, I have always been drawn to music, movies, and creative expression. These interests fuel my approach to event planning, where I strive to craft memorable and engaging experiences for audiences. Seeking to expand my expertise, I chose to pursue a Master's in Creative Event Management, eager to explore new perspectives and gain deeper insights into the intricacies of event production. This journey has allowed me to experiment with innovative ideas, refine my strategic thinking, and push the boundaries of what makes an event truly special.

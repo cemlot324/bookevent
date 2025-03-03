@@ -22,7 +22,7 @@ const SpecialGuest = () => {
               alt="Special Guest"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover rounded-lg shadow-lg"
             />
           </div>
 
