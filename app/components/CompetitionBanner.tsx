@@ -15,7 +15,7 @@ const CompetitionBanner = () => {
               
               <div className="bg-[#4558a3]/5 p-4 rounded-xl border border-[#4558a3]/10">
                 <p className="font-semibold text-[#4558a3]">
-                  5 Lucky Attendees Will Win:
+                  1 Lucky Attendee Will Win:
                 </p>
                 <p className="text-lg mt-2">
                   A Personally Signed Copy of &quot;Be Here Now&quot;
